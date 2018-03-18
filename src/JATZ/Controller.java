@@ -25,7 +25,7 @@ public class Controller {
               {                  
               }
         };                
-        view.getButton().addActionListener(AL01);   
+       // view.getButton().addActionListener(AL01);   
     }
 
     
