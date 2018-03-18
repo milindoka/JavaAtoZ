@@ -6,52 +6,39 @@ import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 
 public class View {
       
     private JFrame frame;
-    private JLabel label;
-    //private JButton button;
 
-    JButton buttons[];
+    JButton ButtonArray[];  //button array
+    
     public View(String text)
     {
     	frame = new JFrame("View - JavaAtoZ");                                    
-        frame.getContentPane().setLayout(new GridLayout(3,3));      
+        frame.getContentPane().setLayout(new GridLayout(10,10));      
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);           
         frame.setSize(200,200);
         frame.setLocationRelativeTo(null);
+         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
         
-        
-        buttons = new JButton[10];
-        for(int i = 0; i < 10; i++) 
+        //// create buttons and add them programmatically
+        ButtonArray = new JButton[100];
+        for(int i = 0; i < 100; i++) 
         {
-            buttons[i] = new JButton(String.valueOf(i));
+            ButtonArray[i] = new JButton(String.valueOf(i));
         }
 
-        for(int i=0;i<9;i++)
+        for(int i=0;i<100;i++)
         {
-        	frame.add(buttons[i]);
+        	frame.add(ButtonArray[i]);
         }
-        
-       
-      //  frame.getContentPane().add(button, BorderLayout.CENTER);        
-    
-    
-    
     }
     
-    
-    
-    
-    
-    
-        
-    /*
-    public JButton getButton(){
-        return button;
+    JButton GetButton(int i)
+    {
+    	return ButtonArray[i];
     }
-    */
+    
 }
