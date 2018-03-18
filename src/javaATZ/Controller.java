@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JOptionPane;
 
 
+
 public class Controller 
 {
 
@@ -48,7 +49,9 @@ public class Controller
     void ActionTerminal(String ButtonString)
     {
     	if(ButtonString.contains("00")) { BorderLayoutDemo(); return; }
-      	show(ButtonString);
+    	if(ButtonString.contains("01")) { PrinterPreferrenceDemo(); return; }
+      	
+    	show(ButtonString);
     }
     
     
@@ -57,7 +60,23 @@ public class Controller
     	E00_BorderLayout BL = new E00_BorderLayout();
     	BL.setModal(true);
     	BL.setVisible(true);
+    	if(BL.Response==null) show("You did not select any button");
+    	else
     	show(BL.Response);
+    }
+    
+    void PrinterPreferrenceDemo()
+    {
+    	SetPrinter sp=new SetPrinter();
+        String printername=sp.LoadPreferences();
+        if(printername==null) printername="No Printer";
+    	
+        
+        printername=sp.SelectPrinter();
+        //view.getSetPRN().setText("Printer : "+ printername+"  (Click To Change");
+        //model.setPrinterName(printername);
+        //sp.SavePreferences();
+        
     }
     
 //////Easy display message for string, int, long
