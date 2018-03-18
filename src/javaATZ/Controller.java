@@ -1,4 +1,4 @@
-package JATZ;
+package javaATZ;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +13,7 @@ public class Controller
     private Model model;
     private View view;
     private ActionListener genericAL;
-    
+    //private AA_Titles Titles;
     public Controller(Model model, View view)
     {
         this.model = model;
@@ -35,15 +35,29 @@ public class Controller
                    }
         	  }
          };
-             
         
         for(int i=0;i<100;i++)  view.GetButton(i).addActionListener(genericAL);   
+
+        /////Set All Button Texts
+        for(int i=0;i<AA_Titles.titles.length;i++)
+        	view.GetButton(i).setText(AA_Titles.titles[i]);
+    
     }
 
     
-    void ActionTerminal(String ttt)
+    void ActionTerminal(String ButtonString)
     {
-      	show(ttt);
+    	if(ButtonString.contains("00")) { BorderLayoutDemo(); return; }
+      	show(ButtonString);
+    }
+    
+    
+    void BorderLayoutDemo()
+    {
+    	E00_BorderLayout BL = new E00_BorderLayout();
+    	BL.setModal(true);
+    	BL.setVisible(true);
+    	show(BL.Response);
     }
     
 //////Easy display message for string, int, long

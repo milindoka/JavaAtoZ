@@ -1,4 +1,4 @@
-package JATZ;
+package javaATZ;
 
 
 import javax.swing.SwingUtilities;

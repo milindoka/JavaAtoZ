@@ -1,4 +1,4 @@
-package JATZ;
+package javaATZ;
 
 import java.io.File;
 

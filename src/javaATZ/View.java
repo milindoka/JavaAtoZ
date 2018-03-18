@@ -1,7 +1,6 @@
-package JATZ;
+package javaATZ;
 
 
-import java.awt.BorderLayout;
 import java.awt.GridLayout;
 
 import javax.swing.JButton;
