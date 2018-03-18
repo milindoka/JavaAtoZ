@@ -13,10 +13,13 @@ public class View {
 
     JButton ButtonArray[];  //button array
     
+    
+    
+    
     public View(String text)
     {
     	frame = new JFrame("View - JavaAtoZ");                                    
-        frame.getContentPane().setLayout(new GridLayout(10,10));      
+        frame.getContentPane().setLayout(new GridLayout(20,5));      
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);           
         frame.setSize(200,200);
         frame.setLocationRelativeTo(null);
@@ -27,7 +30,8 @@ public class View {
         ButtonArray = new JButton[100];
         for(int i = 0; i < 100; i++) 
         {
-            ButtonArray[i] = new JButton(String.valueOf(i));
+        	String tt=String.format("%02d",i);
+            ButtonArray[i] = new JButton(tt);
         }
 
         for(int i=0;i<100;i++)

@@ -20,6 +20,8 @@ public class Controller
         this.view = view;
     }
     
+    
+    
     public void LinkViewButtons()
     {        
         genericAL = new ActionListener() 
@@ -52,6 +54,6 @@ public void show(int msg)
 public void show(long msg)
 {JOptionPane.showMessageDialog(null, msg);}
 
-    
+
     
 }
