@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
+import javax.swing.SwingUtilities;
 
 
 
@@ -15,6 +16,8 @@ public class Controller
     private View view;
     private ActionListener genericAL;
     //private AA_Titles Titles;
+    
+       
     public Controller(Model model, View view)
     {
         this.model = model;
@@ -24,7 +27,8 @@ public class Controller
     
     
     public void LinkViewButtons()
-    {        
+    {   
+        
         genericAL = new ActionListener() 
         { 
         	public void actionPerformed(ActionEvent e) 
@@ -50,9 +54,43 @@ public class Controller
     {
     	if(ButtonString.contains("00")) { BorderLayoutDemo(); return; }
     	if(ButtonString.contains("01")) { PrinterPreferrenceDemo(); return; }
-      	
+    	if(ButtonString.contains("02")) { ProgressBarDemo(); return; }
+    	//otherwise display button string as default action
     	show(ButtonString);
     }
+    
+    void ProgressBarDemo()
+    {
+
+    	E02_ProgressBar m=new E02_ProgressBar();
+    	
+    	
+    	/*
+     for (int i = 0; i <=500; i++) 
+     {
+         final int currentValue = i;
+         try {
+             SwingUtilities.invokeLater(new Runnable()
+                {
+                 public void run() 
+                 
+                    {
+                     pb.dpb.setValue(currentValue);
+                     }
+                 });
+              
+              java.lang.Thread.sleep(100);
+            } catch (InterruptedException e) 
+           {
+            // JOptionPane.showMessageDialog(, e.getMessage());
+         }
+    
+    
+     }
+  */  
+    
+    }
+    	
     
     
     void BorderLayoutDemo()
