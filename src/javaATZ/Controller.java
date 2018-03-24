@@ -61,34 +61,7 @@ public class Controller
     
     void ProgressBarDemo()
     {
-
     	E02_ProgressBar m=new E02_ProgressBar();
-    	
-    	
-    	/*
-     for (int i = 0; i <=500; i++) 
-     {
-         final int currentValue = i;
-         try {
-             SwingUtilities.invokeLater(new Runnable()
-                {
-                 public void run() 
-                 
-                    {
-                     pb.dpb.setValue(currentValue);
-                     }
-                 });
-              
-              java.lang.Thread.sleep(100);
-            } catch (InterruptedException e) 
-           {
-            // JOptionPane.showMessageDialog(, e.getMessage());
-         }
-    
-    
-     }
-  */  
-    
     }
     	
     
