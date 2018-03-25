@@ -5,8 +5,6 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
-import javax.swing.SwingUtilities;
-
 
 
 public class Controller 
@@ -55,6 +53,7 @@ public class Controller
     	if(ButtonString.contains("00")) { BorderLayoutDemo(); return; }
     	if(ButtonString.contains("01")) { PrinterPreferrenceDemo(); return; }
     	if(ButtonString.contains("02")) { ProgressBarDemo(); return; }
+    	if(ButtonString.contains("03")) { E03_DesktopToast.AutoCloseMsg("This is a Test"); return; }
     	//otherwise display button string as default action
     	show(ButtonString);
     }
