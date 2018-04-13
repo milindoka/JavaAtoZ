@@ -54,6 +54,9 @@ public class Controller
     	if(ButtonString.contains("01")) { PrinterPreferrenceDemo(); return; }
     	if(ButtonString.contains("02")) { ProgressBarDemo(); return; }
     	if(ButtonString.contains("03")) { E03_DesktopToast.AutoCloseMsg("This is a Test"); return; }
+    	if(ButtonString.contains("04")) { TabbedPaneDemo(); return; }
+    	
+    	
     	//otherwise display button string as default action
     	show(ButtonString);
     }
@@ -63,6 +66,18 @@ public class Controller
     	E02_ProgressBar m=new E02_ProgressBar();
     }
     	
+    void TabbedPaneDemo()
+    {E04_TabbedPane TP = new E04_TabbedPane();
+	TP.setModal(true);
+	TP.setVisible(true);
+	if(TP.Response==null) show("You did not select any button");
+	else
+	show(TP.Response);
+
+    	
+    }
+    
+    
     
     
     void BorderLayoutDemo()
