@@ -1,10 +1,15 @@
 package javaATZ;
 
 
+import java.awt.Graphics;
 import java.awt.GridLayout;
+import java.awt.Insets;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.border.Border;
+
+import com.sun.xml.internal.ws.api.Component;
 
 public class View {
       
@@ -18,7 +23,7 @@ public class View {
     public View(String text)
     {
     	frame = new JFrame("View - JavaAtoZ");                                    
-        frame.getContentPane().setLayout(new GridLayout(20,5));      
+        frame.getContentPane().setLayout(new GridLayout(20,5,7,5));      
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);           
         frame.setSize(200,200);
         frame.setLocationRelativeTo(null);
@@ -30,7 +35,7 @@ public class View {
         for(int i = 0; i < 100; i++) 
         {
         	String tt=String.format("%02d",i);
-            ButtonArray[i] = new JButton(tt);
+        	ButtonArray[i] = new JButton(tt);
         }
 
         for(int i=0;i<100;i++)
@@ -43,5 +48,7 @@ public class View {
     {
     	return ButtonArray[i];
     }
+    
+    
     
 }

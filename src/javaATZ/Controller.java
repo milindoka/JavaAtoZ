@@ -70,11 +70,6 @@ public class Controller
     {E04_TabbedPane TP = new E04_TabbedPane();
 	TP.setModal(true);
 	TP.setVisible(true);
-	if(TP.Response==null) show("You did not select any button");
-	else
-	show(TP.Response);
-
-    	
     }
     
     

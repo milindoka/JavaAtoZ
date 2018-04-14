@@ -6,7 +6,8 @@ public class AA_Titles
 		 {"00-BorderLayout & JDialog",
 		  "01-Set Printer Preferrence",
 		  "02-JProgressBar Demo",
-		  "03-Desktop Toast Msg"
+		  "03-Desktop Toast Msg",
+		  "04-Tabbed Pane Demo"
 	     
 		 
 		 };
