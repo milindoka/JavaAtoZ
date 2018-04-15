@@ -10,7 +10,7 @@ import javax.swing.ButtonGroup;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
 
-public class SetPrinter 
+public class E01_SetPrinter 
 {
    
 	
@@ -18,7 +18,7 @@ public class SetPrinter
 	
    
 	public void SavePreferences()
-	{Preferences prefs = Preferences.userNodeForPackage(javaATZ.SetPrinter.class);
+	{Preferences prefs = Preferences.userNodeForPackage(javaATZ.E01_SetPrinter.class);
 
 	// Preference key name
 	final String PREF_NAME = "javaAtoZPref";  ///share printer with result software preferences
@@ -29,7 +29,7 @@ public class SetPrinter
 
 
 	public  String LoadPreferences()
-	{Preferences prefs = Preferences.userNodeForPackage(javaATZ.SetPrinter.class);
+	{Preferences prefs = Preferences.userNodeForPackage(javaATZ.E01_SetPrinter.class);
 
 	// Preference key name
 	final String PREF_NAME = "javaAtoZPref";   ///share printer with result software preferences

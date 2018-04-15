@@ -2,6 +2,7 @@ package javaATZ;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 
 import javax.swing.JButton;
 import javax.swing.JOptionPane;
@@ -55,39 +56,51 @@ public class Controller
     	if(ButtonString.contains("02")) { ProgressBarDemo(); return; }
     	if(ButtonString.contains("03")) { E03_DesktopToast.AutoCloseMsg("This is a Test"); return; }
     	if(ButtonString.contains("04")) { TabbedPaneDemo(); return; }
+    	if(ButtonString.contains("05")) { HTML_TextDemo(); return; }
     	
     	
     	//otherwise display button string as default action
     	show(ButtonString);
     }
     
-    void ProgressBarDemo()
-    {
-    	E02_ProgressBar m=new E02_ProgressBar();
-    }
+    
+    
+    ////E05
+    void HTML_TextDemo()
+    {  
     	
+  	  try {
+				new E05_HTML_Text(null,"HTML Text Demo",true);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+  	return;
+  	}
+    
+   /////E04
     void TabbedPaneDemo()
     {E04_TabbedPane TP = new E04_TabbedPane();
 	TP.setModal(true);
 	TP.setVisible(true);
     }
     
+
+    //E03    ///static class
     
     
+    ///E02
     
-    void BorderLayoutDemo()
+    void ProgressBarDemo()
     {
-    	E00_BorderLayout BL = new E00_BorderLayout();
-    	BL.setModal(true);
-    	BL.setVisible(true);
-    	if(BL.Response==null) show("You did not select any button");
-    	else
-    	show(BL.Response);
+    	E02_ProgressBar m=new E02_ProgressBar();
     }
+    	
     
+  ///E01
     void PrinterPreferrenceDemo()
     {
-    	SetPrinter sp=new SetPrinter();
+    	E01_SetPrinter sp=new E01_SetPrinter();
         String printername=sp.LoadPreferences();
         if(printername==null) printername="No Printer";
     	
@@ -98,6 +111,23 @@ public class Controller
         //sp.SavePreferences();
         
     }
+    
+    
+    
+    ////E00
+    void BorderLayoutDemo()
+    {
+    	E00_BorderLayout BL = new E00_BorderLayout();
+    	BL.setModal(true);
+    	BL.setVisible(true);
+    	if(BL.Response==null) show("You did not select any button");
+    	else
+    	show(BL.Response);
+    }
+    
+    
+    
+    
     
 //////Easy display message for string, int, long
 public void show(String msg) 
