@@ -8,8 +8,8 @@ public class AA_Titles
 		  "02-JProgressBar Demo",
 		  "03-Desktop Toast Msg",
 		  "04-Tabbed Pane Demo",
-		  "05-HTML Text Demo"
-	     
+		  "05-HTML Text Demo",
+	      "06-Pupup Menu Demo"
 		 
 		 };
 }

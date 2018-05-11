@@ -5,7 +5,9 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPopupMenu;
 
 
 public class Controller 
@@ -57,6 +59,7 @@ public class Controller
     	if(ButtonString.contains("03")) { E03_DesktopToast.AutoCloseMsg("This is a Test"); return; }
     	if(ButtonString.contains("04")) { TabbedPaneDemo(); return; }
     	if(ButtonString.contains("05")) { HTML_TextDemo(); return; }
+    	if(ButtonString.contains("06")) { PopupMenu(); return; }
     	
     	
     	//otherwise display button string as default action
@@ -64,6 +67,42 @@ public class Controller
     }
     
     
+    void PopupMenu()
+    {
+    	 final JPopupMenu menu = new JPopupMenu("Menu");
+        
+         
+         
+         JMenuItem item1 = new JMenuItem("Item One");
+         item1.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) 
+           {
+             show("Item One clicked");
+           }
+         });
+         menu.add(item1);    
+         
+         JMenuItem item2 = new JMenuItem("Item Two");
+         item2.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) 
+           {
+             show("Item Two clicked");
+           }
+         });
+         menu.add(item2);
+         
+         JMenuItem item3 = new JMenuItem("Item Three");
+         item3.addActionListener(new ActionListener() {
+           public void actionPerformed(ActionEvent e) 
+           {
+             show("Item Three clicked");
+           }
+         });
+         menu.add(item3);
+         
+         JButton b=view.GetButton(6); //get popup button
+         menu.show(b, b.getWidth()/2, b.getHeight()/2);
+    }
     
     ////E05
     void HTML_TextDemo()
