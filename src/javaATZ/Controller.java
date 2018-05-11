@@ -68,40 +68,9 @@ public class Controller
     
     
     void PopupMenu()
-    {
-    	 final JPopupMenu menu = new JPopupMenu("Menu");
-        
-         
-         
-         JMenuItem item1 = new JMenuItem("Item One");
-         item1.addActionListener(new ActionListener() {
-           public void actionPerformed(ActionEvent e) 
-           {
-             show("Item One clicked");
-           }
-         });
-         menu.add(item1);    
-         
-         JMenuItem item2 = new JMenuItem("Item Two");
-         item2.addActionListener(new ActionListener() {
-           public void actionPerformed(ActionEvent e) 
-           {
-             show("Item Two clicked");
-           }
-         });
-         menu.add(item2);
-         
-         JMenuItem item3 = new JMenuItem("Item Three");
-         item3.addActionListener(new ActionListener() {
-           public void actionPerformed(ActionEvent e) 
-           {
-             show("Item Three clicked");
-           }
-         });
-         menu.add(item3);
-         
-         JButton b=view.GetButton(6); //get popup button
-         menu.show(b, b.getWidth()/2, b.getHeight()/2);
+    {E06_PopupMenu pm=new E06_PopupMenu();
+     pm.PopupMenu(view.GetButton(6)); ///show popup menu on button no 6
+    	
     }
     
     ////E05
@@ -163,9 +132,6 @@ public class Controller
     	else
     	show(BL.Response);
     }
-    
-    
-    
     
     
 //////Easy display message for string, int, long
