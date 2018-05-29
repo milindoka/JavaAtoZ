@@ -60,12 +60,24 @@ public class Controller
     	if(ButtonString.contains("04")) { TabbedPaneDemo(); return; }
     	if(ButtonString.contains("05")) { HTML_TextDemo(); return; }
     	if(ButtonString.contains("06")) { PopupMenu(); return; }
-    	
+    	if(ButtonString.contains("07")) { SimplestJDialog(); return; }
     	
     	//otherwise display button string as default action
     	show(ButtonString);
     }
     
+    
+    void SimplestJDialog()
+    {
+    	  try {
+  				new E07_Simplest_JDialog(null,"Simplest JDialog",true);
+  			} catch (IOException e) {
+  				// TODO Auto-generated catch block
+  				e.printStackTrace();
+  			}
+    	return;
+    	
+    }
     
     void PopupMenu()
     {E06_PopupMenu pm=new E06_PopupMenu();

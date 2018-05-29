@@ -9,7 +9,8 @@ public class AA_Titles
 		  "03-Desktop Toast Msg",
 		  "04-Tabbed Pane Demo",
 		  "05-HTML Text Demo",
-	      "06-Pupup Menu Demo"
+	      "06-Pupup Menu Demo",
+		  "07-Simplest JDialog"
 		 
 		 };
 }
