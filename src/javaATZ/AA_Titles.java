@@ -10,7 +10,8 @@ public class AA_Titles
 		  "04-Tabbed Pane Demo",
 		  "05-HTML Text Demo",
 	      "06-Pupup Menu Demo",
-		  "07-Simplest JDialog"
+		  "07-Simplest JDialog",
+	      "08-Transparant JDialog"
 		 
 		 };
 }

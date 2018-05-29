@@ -61,10 +61,24 @@ public class Controller
     	if(ButtonString.contains("05")) { HTML_TextDemo(); return; }
     	if(ButtonString.contains("06")) { PopupMenu(); return; }
     	if(ButtonString.contains("07")) { SimplestJDialog(); return; }
-    	
+    	if(ButtonString.contains("08")) { TransparentJDialog(); return; }
     	//otherwise display button string as default action
     	show(ButtonString);
     }
+    
+    
+    void TransparentJDialog()
+    {
+    	  try {
+  				new E08_TransparentDialog(null,"Simplest JDialog",true);
+  			} catch (IOException e) {
+  				// TODO Auto-generated catch block
+  				e.printStackTrace();
+  			}
+    	return;
+    	
+    }
+    
     
     
     void SimplestJDialog()
