@@ -1,5 +1,6 @@
 package javaATZ;
 
+import java.awt.Cursor;
 import java.awt.Frame;
 import java.io.IOException;
 
@@ -14,6 +15,7 @@ public class E05_HTML_Text extends JDialog
     {
         super(mf,title,modal);
         this.setSize(300,200);
+        this.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         this.setLocationRelativeTo(null);
         String text="<H1>A!</H1><P><FONT COLOR=blue>blue</FONT></P>";
         JEditorPane editor = new JEditorPane("text/html",text);
@@ -21,6 +23,7 @@ public class E05_HTML_Text extends JDialog
           JScrollPane pane = new JScrollPane(editor);
         this.getContentPane().add(pane);
         this.setVisible(true);
+        
     }
 
 

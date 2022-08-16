@@ -9,7 +9,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.border.Border;
 
-import com.sun.xml.internal.ws.api.Component;
+
 
 public class View {
       

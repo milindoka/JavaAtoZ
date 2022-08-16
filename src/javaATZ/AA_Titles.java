@@ -11,7 +11,8 @@ public class AA_Titles
 		  "05-HTML Text Demo",
 	      "06-Pupup Menu Demo",
 		  "07-Simplest JDialog",
-	      "08-Transparant JDialog"
+	      "08-Transparant JDialog",
+		  "09-Set Cursor"
 		 
 		 };
 }

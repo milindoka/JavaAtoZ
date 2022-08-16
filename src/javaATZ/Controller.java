@@ -5,10 +5,12 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 
 import javax.swing.JButton;
+import javax.swing.JFrame;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPopupMenu;
-
+import java.awt.Component;
+import java.awt.Cursor;
 
 public class Controller 
 {
@@ -62,11 +64,18 @@ public class Controller
     	if(ButtonString.contains("06")) { PopupMenu(); return; }
     	if(ButtonString.contains("07")) { SimplestJDialog(); return; }
     	if(ButtonString.contains("08")) { TransparentJDialog(); return; }
+    	if(ButtonString.contains("09")) { SetCursorimage(); return; }                             
     	//otherwise display button string as default action
     	show(ButtonString);
     }
     
     
+    void SetCursorimage()
+    { 
+       
+    }
+
+
     void TransparentJDialog()
     {
     	  try {
